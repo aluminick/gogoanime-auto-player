@@ -11,27 +11,28 @@ Install this script that autoplays your favorite anime on [gogoanime.tv](http://
   * Add this script to **cjs**
   ```javascript
 // Here You can type your custom JavaScript...
-  var video = document.getElementById('my_video_1_html5_api'),
-    ads = document.getElementsByClassName('add_ads')[0],
-    play_button = document.getElementsByClassName('vjs-big-play-button')[0],
-    quality = document.getElementById('selectQuality'),
-    lowestQuality = quality.getElementsByTagName('option').length-1,
-    selectedIndex = 1,
-    selectedQuality = quality.getElementsByTagName('option')[selectedIndex].value,
-    next = document.getElementsByClassName('anime_video_body_episodes_r')[0].getElementsByTagName('a')[0].getAttribute('href');
+// Here You can type your custom JavaScript...
+   var video = document.getElementById('my_video_1_html5_api'),
+      ads = document.getElementsByClassName('add_ads')[0],
+      play_button = document.getElementsByClassName('vjs-big-play-button')[0],
+      quality = document.getElementById('selectQuality'),
+      selectedIndex = 1,
+      selectedQuality = quality.getElementsByTagName('option')[selectedIndex].value,
+      next = (document.getElementsByClassName('anime_video_body_episodes_r')[0].getElementsByTagName('a').length === 0)?null:document.getElementsByClassName('anime_video_body_episodes_r')[0].getElementsByTagName('a')[0].getAttribute('href');
 
-    ads.style.display = "none";
-    play_button.style.display = "none";
-    video.src = selectedQuality;
-    video.load();
-    video.onloadedmetadata = function(){
-        quality.selectedIndex = selectedIndex;
-        video.play();
-    }
-    video.onended = function(){
-        window.location = next+"#"+video.getAttribute('id');
-    }
-    console.log('listening');
+      ads.style.display = "none";
+      play_button.style.display = "none";
+      video.src = selectedQuality;
+      video.load();
+      video.onloadedmetadata = function(){
+          quality.selectedIndex = selectedIndex;
+          video.play();
+      }
+      video.onended = function(){
+          if(next !== null)
+              window.location = next+"#"+video.getAttribute('id');
+      }
+      console.log('listening');
   ```
 ##Option
   Changing the quality:
