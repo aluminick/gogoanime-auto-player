@@ -28,7 +28,7 @@ Install this script that autoplays your favorite anime on [gogoanime.tv](http://
         video.play();
     }
     video.onended = function(){
-        window.location = next;
+        window.location = next+"#"+video.getAttribute('id');
     }
     console.log('listening');
   ```
