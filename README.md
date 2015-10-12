@@ -44,6 +44,7 @@ Install this script that autoplays your favorite anime on [gogoanime.tv](http://
     
     
     Change this line -> `selectedIndex = 1`
+    
     If you have a slow internet connection, set `selectedIndex = lowestQuality`
   
   *Enjoy*!
