@@ -1,7 +1,9 @@
 # gogoanime-auto-player
 *Tired of clicking to the next episode?* Say no more...
 
-Install this script that autoplays your favorite anime on gogoanime.tv **Google Chrome** only.
+Install this script that autoplays your favorite anime on [gogoanime.tv](http://gogoanime.tv/).
+
+**Google Chrome** only.
 #How to use
   * Install google chrome plugin (*cjs*):
   
