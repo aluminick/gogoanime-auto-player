@@ -15,6 +15,7 @@ Install this script that autoplays your favorite anime on [gogoanime.tv](http://
     ads = document.getElementsByClassName('add_ads')[0],
     play_button = document.getElementsByClassName('vjs-big-play-button')[0],
     quality = document.getElementById('selectQuality'),
+    lowestQuality = quality.getElementsByTagName('option').length-1,
     selectedIndex = 1,
     selectedQuality = quality.getElementsByTagName('option')[selectedIndex].value,
     next = document.getElementsByClassName('anime_video_body_episodes_r')[0].getElementsByTagName('a')[0].getAttribute('href');
@@ -42,6 +43,7 @@ Install this script that autoplays your favorite anime on [gogoanime.tv](http://
     `1` = `360p`
     
     
-    Change this line -> selectedIndex = `1`;
+    Change this line -> `selectedIndex = 1`
+    If you have a slow internet connection, set `selectedIndex = lowestQuality`
   
   *Enjoy*!
